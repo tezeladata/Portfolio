@@ -174,7 +174,7 @@ h1{
     color: #141C3A;
 }
 .section4 p a{
-    color: #0056B3;
+    color: #6E07F3;
     text-decoration: none;
 }
 .section4 h2{
@@ -194,7 +194,7 @@ h1{
     height: 300px;
 }
 .goa{
-    background: url(Images/GOA\ background.png) no-repeat;
+    background: url(Images/GOA\ background.webp) no-repeat;
     background-size: cover;
     background-position: center;
 }
