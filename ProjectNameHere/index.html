@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>Portfolio SZ</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script
       src="https://kit.fontawesome.com/ea0066fe44.js"
       crossorigin="anonymous"
@@ -75,12 +76,12 @@
           </div>
         </div>
         <div class="about-div2">
-          <img src="./images/Sandro Zabaxidze.jpg" id="about-img2" alt="">
+          <a href="https://www.facebook.com/sandro.zabakhidze.9" target="_blank"><img src="./images/Sandro Zabaxidze.jpg" id="about-img2" alt=""></a>
           <div class="about-cont3">
             <h2 id="about-h2-2">პროექტის ავტორები</h2>
             <p id="about-p2">სანდრო ზაბახიძე<br>დათა თეზელაშვილი</p>
           </div>
-          <img src="./images/Data Tezelashvili.png" id="about-img3" alt="">
+          <a href="https://www.facebook.com/data.tezela" target="_blank"><img src="./images/Data Tezelashvili.png" id="about-img3" alt=""></a>
         </div>
         <div class="about-div3">
           <img src="./images/literature2.jpg" id="about-img4">
@@ -92,6 +93,28 @@
           </div>
         </div>
       </div>
+    </section>
+    <section id="projects-main">
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide"><img src="images/datatutashxia.png" alt=""></div>
+            <div class="swiper-slide"><img src="images/didostatismarjvena.png" alt=""></div>
+            <div class="swiper-slide"><img src="images/gamzrdeli.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/gandegili.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/kaciaadamiani.png" alt=""></div>
+            <div class="swiper-slide">Slide 6</div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+        <div class="pagination_">
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"><img src="images/icons/back.svg" alt=""></div>
+            <div class="swiper-button-next"><img src="images/icons/next.svg" alt=""></div>
+        </div>
+        </div>
     </section>
 
     <section id="otaraant-qvrivi"></section>
@@ -108,6 +131,9 @@
 
     <section id="didostatis-marjvena"></section>
 
+
+
+    
     <script>
       var tablinks = document.getElementsByClassName("tab-links");
       var tabcontents = document.getElementsByClassName("tab-contents");
@@ -133,6 +159,23 @@
       function closemenu() {
         sidemenu.style.right = "-200px";
       }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper',{
+            speed: 400,
+            spaceBetween: 10,
+            slidesPerView: 2,
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'bullets',
+                clickable: true
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev'
+            }
+        });
     </script>
   </body>
 </html>
