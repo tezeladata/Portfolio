@@ -88,6 +88,7 @@ section{
     background-color: #1b4769;
     color: #e6e6e6;
     width: 65%;
+    height: 70%;
     margin-left: 17.5%;
     margin-top: 14%;
     border-radius: 10px;
@@ -132,15 +133,15 @@ section{
     align-items: center;
 }
 .swiper{
-    width: calc(100% - 20%);
-    height: calc(100vh - 4rem);
+    width: calc(90% - 20%);
+    height: calc(80vh - 4rem);
     border-radius: 8px;
 }
 .swiper-slide > img{
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
+    height: 93%;
+    /* object-fit: cover;
+    object-position: center; */
 }
 .swiper-slide{
     border-radius: 8px;
@@ -148,7 +149,7 @@ section{
 }
 .pagination_{
     position: absolute;
-    width: calc(100% - 10%);
+    width: calc(85% - 0%);
 }
 .pagination_ div[class^="swiper-button"]::after{
     display: none;
@@ -156,11 +157,16 @@ section{
 .pagination_ div[class^="swiper-button"]{
     width: 45px;
     height: 45px;
-    border: 1px solid rgb(75,75,75);
+    background: #1b4769;
+    border: 1px solid #1b4769;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
+}
+.pagination_ div[class^="swiper-button"] p{
+    color: white;
+    /* margin-left: 40%; */
 }
 .pagination_ div[class^="swiper-button"] img{
     width: 60%;
@@ -230,9 +236,21 @@ section{
     #about-p3{
         padding-left: 30px;
     }
+    .swiper-slide > img{
+        height: 75%;
+    }
+    .pagination_ div[class^="swiper-button"]{
+        margin-top: -90px;
+    }
 }
-
-
+@media only screen and (max-width: 750px){
+    .swiper-slide > img{
+        height: 60%;
+    }
+    .pagination_ div[class^="swiper-button"]{
+        margin-top: -120px;
+    }
+}
 @media only screen and (max-width: 600px){
     h1{
         font-size: 20px;
@@ -252,6 +270,9 @@ section{
     }
     #about-p3{
         padding-left: 10px;
+    }
+    .swiper-slide > img{
+        height: 70%;
     }
 }
 

@@ -99,20 +99,24 @@
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
             <!-- Slides -->
-            <div class="swiper-slide"><img src="images/datatutashxia.png" alt=""></div>
-            <div class="swiper-slide"><img src="images/didostatismarjvena.png" alt=""></div>
-            <div class="swiper-slide"><img src="images/gamzrdeli.jpg" alt=""></div>
-            <div class="swiper-slide"><img src="images/gandegili.jpg" alt=""></div>
-            <div class="swiper-slide"><img src="images/kaciaadamiani.png" alt=""></div>
-            <div class="swiper-slide">Slide 6</div>
+            <div class="swiper-slide"><img src="images_otar/1.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images_otar/2.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images_otar/3.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images_otar/4.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images_otar/5.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images_otar/6.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images_otar/7.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images_otar/8.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images_otar/9.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images_otar/10.jpg" alt=""></div>
             </div>
             <!-- If we need pagination -->
             <div class="swiper-pagination"></div>
         </div>
         <div class="pagination_">
             <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev"><img src="images/icons/back.svg" alt=""></div>
-            <div class="swiper-button-next"><img src="images/icons/next.svg" alt=""></div>
+            <div class="swiper-button-prev"><p></p><img src="images/icons/back.svg" alt=""></div>
+            <div class="swiper-button-next"><p></p><img src="images/icons/next.svg" alt=""></div>
         </div>
         </div>
     </section>
@@ -162,8 +166,8 @@
     </script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script>
-        const swiper = new Swiper('.swiper',{
-            speed: 400,
+        let swiper = new Swiper('.swiper',{
+            speed: 300,
             spaceBetween: 10,
             slidesPerView: 2,
             pagination: {
@@ -176,6 +180,18 @@
                 prevEl: '.swiper-button-prev'
             }
         });
+
+        
+        function checkScreenWidth() {
+          if (window.innerWidth < 600) {
+            swiper.params.slidesPerView = 1;
+          } else {
+            swiper.params.slidesPerView = 2;
+          }
+          swiper.update(); 
+        }
+        window.onload = checkScreenWidth;
+        window.addEventListener('resize', checkScreenWidth);
     </script>
   </body>
 </html>
